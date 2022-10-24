@@ -1,0 +1,10 @@
+name: Main Job
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job-name:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      flag: true
