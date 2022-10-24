@@ -10,6 +10,7 @@ on:
 jobs:
   yes-concurrency:
     if: ${{ inputs.flag == 'true' }}
+    environment: dev
     concurrency:
       group: ${{ github.event.repository.name }}-deploy-dev
       cancel-in-progress: true
@@ -18,6 +19,7 @@ jobs:
       - run: echo "Done"
       
   no-concurrency:
+    environment: dev
     if: ${{ inputs.flag != 'true' }}
     runs-on: ubuntu-latest
     steps:
