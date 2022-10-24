@@ -13,7 +13,7 @@ jobs:
     environment: dev
     concurrency:
       group: ${{ github.event.repository.name }}-deploy-dev
-      cancel-in-progress: true
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     steps:
       - run: echo "Done"
